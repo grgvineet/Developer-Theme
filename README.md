@@ -22,7 +22,6 @@ If you'd like to **use the template without the attribution**, you can check out
 
 [Dribbble](https://dribbble.com/Xiaoying)
 
-[Linkedin](https://uk.linkedin.com/in/xiaoying)
 
 
 ##Latest Version
