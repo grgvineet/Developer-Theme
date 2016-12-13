@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vineet Garg's personal website">
+    <meta name="description" content="Vineet Garg, Portfolio, grgvineet">
     <meta name="author" content="Vineet Garg">
     <meta name="robots" content="index,follow">
     <link rel="shortcut icon" href="favicon.ico">
@@ -79,17 +79,34 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Software Engineering Intern - <span class="place"><a href="https://www.arista.com/">ARISTA</a></span> <span class="year">(June 2016 - August 2016)</span></h3>
+                                <p>At ARISTA my task I was involved in implementing mirroring to CPU on StrataXGS Trident II switch series. Worked from manually programming the hardware to writing agents to do that, programming of DMA driver for the feature etc. Successfully implemented the functionality for fixed system switches.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Google Summer of Code Participant - <span class="place"><a href="https://www.kde.org/">KDE</a></span> <span class="year">(April 2015 - August 2015)</span></h3>
+                                <p>KDE Connect is a project which aims to provide a way so that all your devices on same network can communicate with each other. During the GSOC period I ported whole backend of both mobile and desktop written in Android and Qt respectively, to use SSL/TLS for communication between devices. It used Trust On First Use (TOFU) model. This removed the use of RSA for encrypting the data making the system more fast and robust with full packet encryption instead of payload and saved from Man in the Middle attacks
+Prior to that I also contributed for some feature enhancements like notification filtering, progress bar while sending and receiving data etc.</p>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
                <section class="latest section">
                     <div class="section-inner">
                         <h2 class="heading">Latest Projects</h2>
                         <div class="content">
 
                             <div class="item featured text-center">
-                                <h3 class="title"><a href="https://github.com/grgvineet/ParaTube" target="_blank" alt="ParaTube">ParaTube</a> <span class="label label-theme">Open Source</span></h3>
-                                <p class="summary">A cross platform, multi-threaded, GUI YouTube Downloader</p>
+                                <h3 class="title"><a href="https://github.com/grgvineet/mlx" target="_blank" alt="ParaTube">MLX</a> <span class="label label-theme">Open Source</span></h3>
+                                <p class="summary">A Machine Learning library for horizontally partitioned distributed data on top of HPX</p>
                                 <div class="featured-image">
-                                    <a href="https://github.com/grgvineet/ParaTube" target="_blank">
-                                    <img class="img-responsive project-image" src="assets/images/projects/project-featured.png" alt="project name" />
+                                    <a href="https://github.com/grgvineet/mlx" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/mlx.png" alt="MLX" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
@@ -97,13 +114,23 @@
                                     </div>
 
                                 <div class="desc text-left">
-                                    <p>ParaTube is a multi threaded(parallel) YouTube video downloader, specially designed to utilize maximum available bandwidth on public networks to download videos as fast as possible. User can select from available available formats according to his needs. It is written in C++ using Qt framework to make it cross platform. ParaTube is still in its infancy but can download single videos and whole playlists at very fast rates.</p>
+                                    <p>MLX is a machine learning library implemented on top of HPX for horizontally partitioned distributed data. It provides an easy to use API similar to R and Python. It currently supports 3 algorithms, Linear Regression, K-Means &amp; Random Forests. It can run all these algorithms over horizontally partitioned data stored in CSV format distributed over multiple nodes. As it is build on top of HPX, it is a runtime system that starts with application startup and exits with it, thus no rigorous installation and setting up required. </p>
                                 </div><!--//desc-->
                             </div><!--//item-->
                             <hr class="divider" />
                             <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/grgvineet/ParaTube" target="_blank">
+                                <img class="img-responsive project-image" src="assets/images/projects/paratube.png" alt="Paratube" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/the-dagger/lEarnit" target="_blank">Paratube</a> <span class="label label-theme">Open Source</span></h3>
+                                    <p>ParaTube is a multi threaded(parallel) YouTube video downloader, specially designed to utilize maximum available bandwidth on public networks to download videos as fast as possible. User can select from available available formats according to his needs. It is written in C++ using Qt framework to make it cross platform. ParaTube is still in its infancy but can download single videos and whole playlists at very fast rates.</p>
+                                    <p><a class="more-link" href="https://github.com/the-dagger/lEarnit" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->
+                            </div><!--//item-->
+                            <div class="item row">
                                 <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/the-dagger/lEarnit" target="_blank">
-                                <img class="img-responsive project-image" src="assets/images/projects/project-2.png" alt="Hackerhire" />
+                                <img class="img-responsive project-image" src="assets/images/projects/learnit.png" alt="Hackerhire" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                     <h3 class="title"><a href="https://github.com/the-dagger/lEarnit" target="_blank">lEarnIt</a> <span class="label label-theme">Open Source</span></h3>
@@ -115,7 +142,7 @@
                             <hr class="divider" />
                             <div class="item row">
                                 <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/grgvineet/hackerhire" target="_blank">
-                                <img class="img-responsive project-image" src="assets/images/projects/project-1.png" alt="Hackerhire" />
+                                <img class="img-responsive project-image" src="assets/images/projects/hackerhire.png" alt="Hackerhire" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                     <h3 class="title"><a href="https://github.com/grgvineet/hackerhire" target="_blank">Hackerhire</a> <span class="label label-theme">Open Source</span></h3>
@@ -146,22 +173,7 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
-                <section class="experience section">
-                    <div class="section-inner">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Software Engineering Intern - <span class="place"><a href="https://www.arista.com/">ARISTA</a></span> <span class="year">(June 2016 - August 2016)</span></h3>
-                                <p>At ARISTA my task was to implement mirroring to CPU on StrataXGS Trident II switch series. Worked from manually programming the hardware to writing agents to do that, programming of DMA driver for the feature etc. Successfully implemented the functionality for fixed system switches.</p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title">Google Summer of Code Participant - <span class="place"><a href="https://www.kde.org/">KDE</a></span> <span class="year">(April 2015 - August 2015)</span></h3>
-                                <p>KDE Connect is a project which aims to provide a way so that all your devices on same network can communicate with each other. During the GSOC period I ported whole backend of both mobile and desktop written in Android and Qt respectively, to use SSL/TLS for communication between devices. It used Trust On First Use (TOFU) model. This removed the use of RSA for encrypting the data making the system more fast and robust with full packet encryption instead of payload and saved from Man in the Middle attacks
-Prior to that I also contributed for some feature enhancements like notification filtering, progress bar while sending and receiving data etc.</p>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
+                
                 <section class="github section">
                     <div class="section-inner">
                         <h2 class="heading">My GitHub</h2>
@@ -201,7 +213,15 @@ Prior to that I also contributed for some feature enhancements like notification
                                 <div class="item">
                                     <h3 class="level-title">C++</h3>
                                     <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="70%">
+                                        <div class="level-bar-inner" data-level="75%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">Bash &amp; Python</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="60%">
                                         </div>
                                     </div><!--//level-bar-->
                                 </div><!--//item-->
@@ -238,13 +258,6 @@ Prior to that I also contributed for some feature enhancements like notification
                                     </div><!--//level-bar-->
                                 </div><!--//item-->
 
-                                <div class="item">
-                                    <h3 class="level-title">Bash &amp; Python<span class="level-label">Pro</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="40%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
 
                                 <!-- <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p> -->
                             </div>
