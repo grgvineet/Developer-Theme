@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<section class="about section">
+    <div class="section-inner">
+        <h6 class="item">{{ page.date | date: '%B %d, %Y' }}</h6>
+        <h2 class="heading"><a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a></h2>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</section>

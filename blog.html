@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% for post in site.posts limit:2 %}
+<section class="about section">
+    <div class="section-inner">
+        <h6 class="item">{{ post.date | date: '%B %d, %Y' }}</h6>
+        <h2 class="heading"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="content">
+            
+            <a href="{{ site.baseurl }}{{ post.url }}" class="more-link"><i class="fa fa-external-link"></i> Read More</a>
+        </div>
+    </div>
+</section>
+{% endfor %}
