@@ -22,7 +22,9 @@
 </head>
 
 <body>
+    {% include navbar.html %}
     <!-- ******HEADER****** -->
+
     <header class="header">
         <div class="container">
             <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Vineet Garg" />
@@ -33,9 +35,11 @@
                     <li><a href="https://github.com/grgvineet"><i class="fa fa-github-alt"></i></a></li>
                     <li><a href="https://linkedin.com/in/grgvineet"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://twitter.com/grg_vineet"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="blog"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="contact"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="assets/files/vineetgarg.pdf"><i class="fa fa-file-text"></i></a></li>
                 </ul>
             </div><!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="assets/files/vineetgarg.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
         </div><!--//container-->
     </header><!--//header-->
 
@@ -330,13 +334,7 @@ Prior to that I also contributed for some feature enhancements like notification
         </div><!--//row-->
     </div><!--//masonry-->
 
-    <!-- ******FOOTER****** -->
-    <footer class="footer">
-        <div class="container text-center">
-                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">Designed by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
-        </div><!--//container-->
-    </footer><!--//footer-->
+    {% include footer.html %}
 
     <!-- Javascript -->
     <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
@@ -353,21 +351,7 @@ Prior to that I also contributed for some feature enhancements like notification
     <script type="text/javascript" src="assets/js/main.js"></script>
 
 <div >
-      {% for post in site.posts %}
-      <h1> dsfdg</h1>
-          <article>
 
-              <h1><a href="{{
-              site.baseurl }}{{
-                      post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-          {{ post.excerpt }}
-      </div>
-
-      <a href="{{site.baseurl }}{{post.url }}" >Read More</a>
-              </article>
-      {% endfor %}
 </div>
 
 </body>
