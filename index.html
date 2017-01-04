@@ -301,7 +301,7 @@ Prior to that I also contributed for some feature enhancements like notification
                         <h2 class="heading">Latest Blog Posts</h2>
                         <div id="rss-feeds" class="content">
                             <div class='item'>
-                                {% for post in site.posts | limit : 3 %}
+                                {% for post in site.posts limit : 3 %}
                                     <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title}}</a></h3>
                                     <div>
                                         <p>{{post.excerpt}}</p>
