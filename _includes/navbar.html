@@ -7,10 +7,10 @@
                     <span class="icon-bar"></span> 
                 </button>
                 <!-- Too much hacky solutin, fix it -->
-                {% if page.path contains 'blog' or page.path contains '_posts' %}
-                <a class="navbar-brand" href="#">Vineet Garg's Blog</a>
-                {% else %}
+                {% if page.path == 'index.html' or page.path == 'contact.html' %}
                 <a class="navbar-brand" href="#">Vineet Garg</a>
+                {% else %}
+                <a class="navbar-brand" href="#"> Vineet Garg's Blog</a>
                 {% endif%}
 
             </div>
