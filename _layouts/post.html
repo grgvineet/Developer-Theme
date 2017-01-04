@@ -9,11 +9,16 @@ layout: default
         <div class="content">
             {{ content }}
         </div>
+        {% if page.tags.size > 0 %}
+              <h5><i class="fa fa-tag" aria-hidden="true"> </i>Tag{% if page.tags.size > 1 %}s{% endif %} : {{ page.tags | sort | join: ", " }}</h5>
+        {% endif %} 
     </div>
 </section>
 
+{% if page.comments %}
 <section class="about section">
     <div class="section-inner">
         {% include disqus.html %}
     </div>
 </section>
+{% endif %}

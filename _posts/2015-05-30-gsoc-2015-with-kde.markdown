@@ -1,0 +1,46 @@
+---
+layout: post
+title: GSOC 2015 with KDE
+categories: [ GSOC, KDE ]
+comments: true
+tags: GSOC KDE KDEConnect
+---
+<img src="/assets/images/gsoc-banner.png" alt="GSOC 2015" width="100%"/>
+
+Though late in posting due to my exams,but love to tell everyone about finally getting selected for GSOC 2015 to work with KDE to improve encryption scheme for KDE Connect.
+
+Those who don't know about GSOC, KDE or KDE Connect, here is a quick introduction :
+
+**What is [Google Summer of Code](https://www.google-melange.com/gsoc/homepage/google/gsoc2015){:target="_blank"} ?**
+
+The Google Summer of Code (GSoC) is an international annual program,held from May to August since 2005, in which Google awards stipends to all students who successfully complete a requested free and open-source software coding project during the summer.
+
+**What is [KDE](https://www.kde.org/){:target="_blank"} ?**
+
+KDE is an international free software community producing an integrated set of cross-platform applications designed to run on Linux, FreeBSD, Solaris, Microsoft Windows, and OS X systems.
+
+**What is [KDE Connect](https://community.kde.org/KDEConnect){:target="_blank"} ?**
+
+KDE Connect is a project that aims communication between all your devices. Ig currently runs on KDE (compilable on other platforms also) and Android platform.
+It was started during GSOC 2013 by Albert Vaca and is continuosly enhancing by adding more and more features and improving functionalites. 
+
+It currently supports 9 plugins:
+1. **Battery**   - shows phone battery status on desktop
+2. **Clipboard** - a bi-directional clipboard sync between desktop and phone
+3. **Touchpad**  - allows your phone be used as touchpad for desktop
+4. **Media player control** - you can access you media players running in desktop through phone
+5. **Notification sync**    - shows Android notifications on desktop(currently works for Android version greader that KitKat)
+6. **Ping**   - Just to ping your one device from other
+7. **Sftp**   - allows you to browse phone's filesystem through you desktop
+8. **Share**  -An easy share of files from desktop to phone or vice vesra
+9. **Telephony Plugin** -Show notifications about incoming calls and messages on desktop and also pauses media players while you are talking on phone and resumes as soon as you hang up
+
+**How does it work ?**
+
+It runs as background service in devices.It also has a UI through which user can interact. As soon as a new device is in network, it is shown as an available device. You may send a paring request to other device and if other device accepts it, both device share their 2048 bit public key. After pairing, the devices can communicate with each other based on above mentioned plugins. All communication between the devices(except file sharing) is encrypted by RSA encryption using public key shared during paring.
+
+**What is my project ?**
+
+Since plain RSA is susceptible to many attacks e.g. Man in the Middle attack, Blachienbahar attack (as the padding scheme used in PKCSv1.5), my task is to implement SSL protocol to be used to communication. As SSL protocol is most secure protocol currently being used in wide number of places, it will make the communication much more secure.Also, earlier full packet was not encrypted, only the main part(the data that is send) was encrypted. Now whole network package will be encrypted by SSL itself. File transfers will also be on SSL, so no eavesdropper can see the contents of file or cannot tamper it.
+
+Looking forward for a wonderful summer with lots of new things to learn and a stipend to earn :D 

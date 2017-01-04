@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% else %}{{ site.name }} {% endif %}</title>
 
     {% include meta.html %}
 
@@ -15,22 +15,24 @@
 
 <body>
     {% include navbar.html %}
-    <!-- ******HEADER****** -->
-    <header class="header">
-        <div class="container">
-            <div class="profile-content pull-left">
-                <h1 class="name">Vineet Garg's Blog</h1>
-            </div><!--//profile-->
-        </div><!--//container-->
-    </header><!--//header-->
 
     <div class="container sections-wrapper">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
                 {{ content}}
             </div>
+
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+
+                {% include archives.html %}
+
+                {% include tagcloud.html %}
+            </div>
+
+
         </div>
-    </div>  
+    </div>
+
 
     {% include footer.html %}
 
@@ -39,6 +41,7 @@
     <script type="text/javascript" src="/assets/plugins/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.js" type="text/javascript" charset="utf-8"></script> 
     <!-- github calendar plugin -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>

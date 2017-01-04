@@ -2,17 +2,20 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-<section class="about section">
+<section class="section">
+    <div class="section-inner">
+        <h2 class="heading nomargin">Posts with {{ page.type }} '{{ page.title }}'</h2>
+    </div>
+</section>
+
+{% for post in page.posts %}
+<section class="section">
     <div class="section-inner">
         <h6 class="item">{{ post.date | date: '%B %d, %Y' }}</h6>
         <h2 class="heading"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
         <div class="content">
             <p> {{ post.excerpt }} </p>
             <a href="{{ site.baseurl }}{{ post.url }}" class="more-link"><i class="fa fa-external-link"></i> Read More</a>
-            {% if post.tags.size > 0 %}
-              <h5><i class="fa fa-tag" aria-hidden="true"></i> Tag{% if post.tags.size > 1 %}s{% endif %} : {{ post.tags | sort | join: ", " }}</h5>
-            {% endif %}
         </div>
     </div>
 </section>

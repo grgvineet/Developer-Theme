@@ -7,7 +7,12 @@
  * Website: http://themes.3rdwavemedia.com/
 */
 /* ======= Base ======= */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
+  height: 100%;
   padding-top: 60px; 
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
@@ -101,6 +106,10 @@ a.dotted-link {
 a.dotted-link:hover {
   text-decoration: none;
   color: #49515a;
+}
+
+.nomargin {
+  margin: 0px !important;
 }
 /*
 iframe {
@@ -508,8 +517,34 @@ iframe {
 .credits .btn {
   margin-bottom: 15px;
 }
+/* ======= Archive ======*/
+
+.archive .section-inner .content h4,
+.archive .section-inner .content h5,
+.archive .section-inner .content h6 {
+  margin: 0px;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+
+.archive .section-inner .content div {
+  padding-left: 25px;
+}
+
+.archive .section-inner .content div div {
+  padding-left: 25px;
+}
+
+.bullet {
+  color: #000;
+  font-size: 50%;
+  vertical-align: 50%;
+}
 /* ======= Footer ======= */
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background: #32383e;
   color: #fff;
   padding: 10px 0;

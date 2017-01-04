@@ -36,8 +36,6 @@
                     <li><a href="https://linkedin.com/in/grgvineet" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://twitter.com/grg_vineet" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="blog" title="Blog"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="contact" title="Blog"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="assets/files/vineetgarg.pdf" title="Resume"><i class="fa fa-file-text"></i></a></li>
                 </ul>
             </div><!--//profile-->
         </div><!--//container-->
@@ -302,7 +300,15 @@ Prior to that I also contributed for some feature enhancements like notification
                     <div class="section-inner">
                         <h2 class="heading">Latest Blog Posts</h2>
                         <div id="rss-feeds" class="content">
-
+                            <div class='item'>
+                                {% for post in site.posts | limit : 3 %}
+                                    <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title}}</a></h3>
+                                    <div>
+                                        <p>{{post.excerpt}}</p>
+                                        <a class="more-link" href="{url}" target="_blank"><i class="fa fa-external-link"></i>Read more</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </div><!--//content-->
                     </div><!--//section-inner-->
                 </aside><!--//section-->
@@ -337,13 +343,11 @@ Prior to that I also contributed for some feature enhancements like notification
     {% include footer.html %}
 
     <!-- Javascript -->
-    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- github calendar plugin -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
     <!-- github activity plugin -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
