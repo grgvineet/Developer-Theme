@@ -3,26 +3,43 @@
         <h2 class="heading">Tags</h2>
         <div id="tagcloud" class="content">
         	{% assign max_weight = -1 %}
+        	{% assign min_weight = 9999 %}
         	{% for tag in site.tags %}
         		{% assign tag_size = tag[1] | size %}
         		{% if tag_size > max_weight %}
         			{% assign max_weight = tag_size %}
         		{% endif %}
+        		{% if tag_size < min_weight %}
+        			{% assign min_weight = tag_size %}
+        		{% endif %}
         	{% endfor %}
 
-        	{% assign max_font_size = 30 %}
+        	{% assign max_font_size = 32 %}
         	{% assign min_font_size = 16 %}
         	{% assign font_size_difference = max_font_size | minus : min_font_size %}
 
-        	{% assign maxw_minus_minw = max_weight | minus : 1 %}
+        	{% assign maxw_minus_minw = max_weight | minus : min_weight %}
 
-        	{% assign slope = font_size_difference | divided_by : maxw_minus_minw %}
-        	{% assign const = min_font_size | minus : font_size_difference | divided_by : maxw_minus_minw %}
-            {% for tag in site.tags %}
-            	{% assign weight = tag[1] | size %}
-            	{% assign font_size = weight  | times : slope | plus : const %}
-            	<a href="/tag/{{ tag[0] | slugify }}" title="{{ tag[0] }}" id="tag-{{ tag[0] | slugify }}" style="font-size: {{font_size}}px">  {{ tag[0] }}  </a>
-            {% endfor %}
+        	{% if maxw_minus_minw == 0 %}
+        		{% comment %} All tags have same weight, assign avg font size {% endcomment %}
+        		{% for tag in site.tags %}
+	            	{% assign weight = tag[1] | size %}
+	            	{% assign font_size = max_font_size  | plus : max_font_size | divided_by : 2 %}
+	            	<a href="/tag/{{ tag[0] | slugify }}" title="{{ tag[0] }}" id="tag-{{ tag[0] | slugify }}" style="font-size: {{font_size}}px">  {{ tag[0] }}  </a>
+            	{% endfor %}
+        	{% else %}
+        		{% assign slope = font_size_difference | divided_by : maxw_minus_minw %}
+	            {% assign const_1  = min_font_size | times : maxw_minus_minw %}
+	            {% assign const_2  = font_size_difference | times : min_weight %}
+	        	{% assign const = const_1 | minus : const_2 | divided_by : maxw_minus_minw %}
+	            {% for tag in site.tags %}
+	            	{% assign weight = tag[1] | size %}
+	            	{% assign font_size = weight  | times : slope | plus : const %}
+	            	<a href="/tag/{{ tag[0] | slugify }}" title="{{ tag[0] }}" id="tag-{{ tag[0] | slugify }}" style="font-size: {{font_size}}px">  {{ tag[0] }}  </a>
+	            {% endfor %}
+        	{% endif %}
+
+        	
         </div> <!-- //content -->
     </div><!--//section-inner-->
 </aside><!--//aside-->
